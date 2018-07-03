@@ -1,0 +1,4 @@
+16.04: [2h] Flask and SQLAlchemy documentation
+17:04: [1h] Initial project with basic skeleton; First reply from Flask
+18.04: [4h] SQLs, GET, basic tests
+20.04: [8h] Everything.. POST with updates and more error handeling; Memcache; Redis; Cleanup; Terraform; Schema

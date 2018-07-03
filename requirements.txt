@@ -1,0 +1,11 @@
+psycopg2-binary
+pylibmc
+Flask-Caching
+Flask-SQLAlchemy
+Flask-Migrate
+Flask-Script
+### Tests
+flake8
+tox
+pytest-cov
+flask_debugtoolbar

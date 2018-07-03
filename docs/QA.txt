@@ -1,0 +1,23 @@
+- Batch updates:
+	I would love to see example of such batch update.
+	Currently my testing scenario is:
+	time curl --data "date_from=2016-01-02&date_to=2016-03-10&origin_code=FIHEL&destination_code=ESGIJ&price=667" -X POST http://localhost:8080/rates | jq .
+	In case of update I would need to implement additional mechanisms (eg. update in form of json)
+	Used transactions and add_all method.
+	In case of issue with update I am using s.rollback() (needs to be tested)
+	For bigger updates I would also use Redis.
+
+- Both the incoming data updates..:
+	Used memcache (typically from 60ms -> 20ms)
+
+- Being a paid service, high availability is very much a requirement;
+	Diagram
+
+- Code updates need to be pushed out frequently..:
+	Pipeline (eg. in Jenkins) with Blue/Green deployment or just good staging/dev env and tested rollback.
+	In AWS we can use either ECS or (simples) ElasticBeanStalk
+	Containers being hold in ECR with rolling update (eg. 30% of instances at a time) on BeanStalk/ECS.
+
+- How would you restructure and scale the system to address those:
+	Diagram
+
